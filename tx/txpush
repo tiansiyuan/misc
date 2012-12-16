@@ -1,0 +1,17 @@
+#!/bin/bash
+
+BASEPATH=/home/tian/projects/csdocs
+cd $BASEPATH
+
+ls translations/ACS_DOCS.$1
+
+read -p "Do you want to continue?" yn
+case $yn in
+    [Nn]* ) exit;;
+esac
+
+cp translations/ACS_DOCS.$1/en.po translations/ACS_DOCS.$1/zh_CN.po
+
+vi translations/ACS_DOCS.$1/zh_CN.po
+
+tx push -l zh_CN -r ACS_DOCS.$1 -t
