@@ -4,7 +4,9 @@
 
 import os
 import operator
-from pprint import pprint
+import subprocess
+import shlex
+# from pprint import pprint
 
 pathname = '/home/tian/projects/csdocs/translations'
 en_dict = dict()
@@ -16,4 +18,21 @@ for i in os.listdir(pathname):
            en_dict[ i[9:] ] = os.path.getsize(pathname+'/'+i+'/'+'en.po')
 
 sorted_en = sorted(en_dict.iteritems(), key=operator.itemgetter(1))
-pprint(sorted_en)
+length = len(sorted_en)
+print "%d items left." % length
+
+#pprint(sorted_en)
+
+n = length - 1
+while n >= 0:
+    print n, sorted_en[n]
+    n -= 1
+
+while True:
+    num = int(raw_input("Please input the item no.: "))
+    if num >= 0 and num < length:
+        item = sorted_en[num][0]
+        # args = shlex.split(["txpush","%s" % item ])
+        subprocess.Popen(["txpush","%s" % item ]).wait()
+    else:
+        break
