@@ -123,6 +123,7 @@ while True:
         if os.path.exists(popath + 'zh_CN.po.bak'):
             shutil.move(popath + 'zh_CN.po.bak', popath + 'zh_CN.po')
         else:
+            print "translating ...\n"
             shutil.copyfile(popath + 'en.po', popath + 'zh_CN.po')
             get_trans(sorted_en[num][0])
 
@@ -134,10 +135,10 @@ while True:
 
         if confirmation == 'Y' or confirmation == 'y' :
             # tx push -l zh_CN -r ACS_DOCS.$1 -t
-            print "trying: tx push -l zh_CN -r ACS_DOCS.%s -t" % item
+            print "trying:\n tx push -l zh_CN -r ACS_DOCS.%s -t" % item
             subprocess.Popen(["tx", "push -l zh_CN -r ACS_DOCS.%s -t" % item ]).wait()
         else:
-            shutil.move(popath + 'zh_CN.po', popathname + 'zh_CN.po.bak')
+            shutil.move(popath + 'zh_CN.po', popath + 'zh_CN.po.bak')
             print('translation of %s is not pushed back, it is backed up in the same dir.' % item)
     else:
         break
