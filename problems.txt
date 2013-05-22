@@ -1,0 +1,6 @@
+OperationalError: unable to open database file
+    caused by sqlite3 file pathname.
+
+from django.contrib.auth.models import User
+
+CharFields
