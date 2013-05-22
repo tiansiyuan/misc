@@ -1,0 +1,17 @@
+Once you learn Objective-C in this book, you’ll be ready to dive into Cocoa with a full-blown project or another book such as Learn Cocoa on the Mac or Begin- ning iPhone Development, both by Dave Mark and Jeff LaMarche (Apress 2009).
+
+Cocoa and Objective-C are at the heart of Apple’s Mac OS X operating system. Although Mac OS X is relatively new, Objective-C and Cocoa are much older. Brad Cox invented Objective-C in the early 1980s to meld the popular and portable C language with the elegant Smalltalk language. 
+
+When Apple acquired NeXT in 1996 (or was it the other way around?), NextSTEP was renamed Cocoa and brought to the wider audience of Macintosh programmers. 
+
+resources:
+http://www.apple.com/developer
+http://osx.hyperjeff.net/reference/CocoaArticles.php http://www.cocoadev.com
+http://www.cocoabuilder.com
+http://www.stepwise.com
+
+“cocoa-dev”邮件列表(网址 http://lists.apple.com/mailman/listinfo/cocoa-dev)。
+
+storyboard vs. nib
+
+The former, storyboard, is recently introduced and has some advantages comparied with nib.
