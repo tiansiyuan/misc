@@ -7,7 +7,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'patient.views.home', name='index'),
-    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    # url(r'^accounts/', include('registration.backends.default.urls')),
     # url(r'^register/$', 'patient.views.register'),
     #                   url(r'^login/$', 'login', name='login'),
     # url(r'^logout/$', 'logout'),

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Django==1.5.1
 PIL==1.1.7
 South==0.7.6
@@ -11,3 +12,8 @@ readline==6.2.4.1
 redis==2.7.3
 wsgiref==0.1.2
 xlrd==0.9.2
+=======
+django
+south
+django-registration
+>>>>>>> 29d38daf0e2039047772329562043e99f93f6b86
